@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Rive Hello World</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500"></canvas>
+   
+    <script src="https://unpkg.com/@rive-app/canvas@2.10.3"></script>
+    <script>
+      const r = new rive.Rive({
+        src: "17-06-24-1.riv",
+        canvas: document.getElementById("canvas"),
+        autoplay: true,
+        stateMachines: "State Machine 1",
+        onLoad: () => {
+          r.resizeDrawingSurfaceToCanvas();
+        },
+      });
+    </script>
+    <p>Click plane for animation</p>
+    <footer>
+        <a href="/index.html">home</a>
+    </footer>
+  </body>
+</html>
